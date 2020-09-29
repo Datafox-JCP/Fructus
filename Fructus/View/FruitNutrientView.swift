@@ -10,12 +10,12 @@ import SwiftUI
 struct FruitNutrientView: View {
     // MARK: - Properties
     var fruit: Fruit
-    let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
+    let nutrients: [String] = ["Energía", "Azucar", "Grasa", "Proteinas", "Vitaminas", "Minerales"]
     
     // MARK: - Body
     var body: some View {
         GroupBox() {
-            DisclosureGroup("Nutritional value per 100g") {
+            DisclosureGroup("Valor nutricional por cada 100g") {
                 ForEach(0 ..< nutrients.count, id: \.self) { item in
                     Divider().padding(.vertical, 2)
                     HStack {
