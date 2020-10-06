@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
+    @State private var isShowingSettings: Bool = false
 
     var fruits: [Fruit] = fruitsData
 
@@ -23,7 +24,17 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Frutas")
+            .navigationTitle("Fructus")
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                                        isShowingSettings = true
+                                    }) {
+                                        Image(systemName: "slider.horizontal.3")
+                                    }
+                .sheet(isPresented: $isShowingSettings) {
+                    SettingsView()
+                }
+            )
         } //: Navigation
     }
 }
@@ -32,6 +43,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(fruits: fruitsData)
-            .previewDevice("iPhone 11 Pro")
+            .previewDevice("iPhone 11")
     }
 }

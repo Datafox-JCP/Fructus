@@ -35,7 +35,7 @@ struct FruitDetailView: View {
                         FruitNutrientView(fruit: fruit)
                         
                         // Subheadline
-                        Text("Learn more about \(fruit.title)".uppercased())
+                        Text("To know more of   \(fruit.title)".uppercased())
                             .fontWeight(.bold)
                             .foregroundColor(fruit.gradientColors[1])
                         

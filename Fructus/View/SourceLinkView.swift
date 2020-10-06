@@ -14,7 +14,7 @@ struct SourceLinkView: View {
     var body: some View {
         GroupBox() {
             HStack {
-                Text("Content source")
+                Text("Content origin")
                 Spacer()
                 Link("Wikipedia", destination: URL(string: "https://wikipedia.com")!)
                 Image(systemName: "arrow.up.right.square")
